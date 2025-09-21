@@ -19,28 +19,73 @@
             color: #fff;
             overflow: hidden; /* ✅ prevents zoomed image overflow */
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add background box */
+        .banner-box {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;  /* Keeps it centered on big screens */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         /* Zoom effect for banner background image */
-        .college-banner img {
+        .banner-box img {
             width: 100%;
-            aspect-ratio: 16/9;
+            height: auto;
             object-fit: cover;
             opacity: 0.5;
             transition: transform 0.3s ease-in-out;
         }
 
+        /* Text inside box */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+        }
+
+        .banner-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: purple;
+        }
+
+        .banner-text p {
+            font-size: 1rem;
+            margin-top: 15px;
+            color: black;
+            background: rgba(255,255,255,0.7);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
         /* Extra zoom for mobile */
         @media (max-width: 768px) {
-            .college-banner img {
-                transform: scale(1.35);
+            .banner-box img {
+                transform: scale(1.2);
+            }
+            .banner-text h1 {
+                font-size: 1.8rem;
+            }
+            .banner-text p {
+                font-size: 0.9rem;
             }
         }
 
         /* Extra zoom for desktop */
         @media (min-width: 1024px) {
-            .college-banner img {
-                transform: scale(1.1);
+            .banner-box img {
+                transform: scale(1.05);
             }
         }
 
@@ -82,12 +127,14 @@
         </p>
     </section>
 
-    <!-- Top Background Section with Image -->
+    <!-- Top Background Section with Image inside a Box -->
     <section class="college-banner" id="home">
-        <img src="assets/college-bg.jpg" alt="College">
-        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); padding:20px;">
-            <h1 style="font-size:40px; font-weight:700; color:purple;">Welcome to NUIT Noida</h1>
-            <p style="font-size:16px; margin-top:15px; color:black;">A premier institute dedicated to academic excellence, innovation, and industry-driven education.</p>
+        <div class="banner-box">
+            <img src="assets/college-bg.jpg" alt="College">
+            <div class="banner-text">
+                <h1>Welcome to NUIT Noida</h1>
+                <p>A premier institute dedicated to academic excellence, innovation, and industry-driven education.</p>
+            </div>
         </div>
     </section>
 
