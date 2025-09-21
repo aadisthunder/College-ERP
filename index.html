@@ -9,7 +9,16 @@
     <style>
         /* Fix scroll alignment so section titles aren’t hidden under navbar */
         #about, #admission, #faculty, #hostel, #login-section {
-            scroll-margin-top: 80px; /* adjust if your navbar height differs */
+            scroll-margin-top: 80px;
+        }
+
+        /* College Banner Container Fix */
+        .college-banner {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            overflow: hidden; /* ✅ prevents zoomed image overflow */
+            width: 100%;
         }
 
         /* Zoom effect for banner background image */
@@ -24,20 +33,20 @@
         /* Extra zoom for mobile */
         @media (max-width: 768px) {
             .college-banner img {
-                transform: scale(1.35); /* was 1.25 → now 1.35 (10% more zoom) */
-            }
-
-            /* ✅ Hide extra content on the right side (red marked portion) */
-            body {
-                overflow-x: hidden;
+                transform: scale(1.35);
             }
         }
 
         /* Extra zoom for desktop */
         @media (min-width: 1024px) {
             .college-banner img {
-                transform: scale(1.1); /* 10% zoom for desktops */
+                transform: scale(1.1);
             }
+        }
+
+        /* Prevent horizontal scroll globally */
+        body {
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -63,7 +72,7 @@
         </div>
     </nav>
 
-    <!-- About Us Section (Moved below header) -->
+    <!-- About Us Section -->
     <section class="about-top" id="about" style="background:#f9f9f9; padding:40px 20px; text-align:center;">
         <h2>About Us</h2>
         <p style="max-width:900px; margin:15px auto; font-size:16px; line-height:1.6;">
@@ -74,14 +83,15 @@
     </section>
 
     <!-- Top Background Section with Image -->
-    <section class="college-banner" id="home" style="position: relative; text-align: center; color: #fff;">
+    <section class="college-banner" id="home">
         <img src="assets/college-bg.jpg" alt="College">
-        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); max-width:2170px; padding:20px;">
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); padding:20px;">
             <h1 style="font-size:40px; font-weight:700; color:purple;">Welcome to NUIT Noida</h1>
             <p style="font-size:16px; margin-top:15px; color:black;">A premier institute dedicated to academic excellence, innovation, and industry-driven education.</p>
         </div>
     </section>
 
+    <!-- Remaining sections unchanged -->
     <!-- Proud moments of NUIT Section -->
     <section class="about" id="admission">
         <div class="about-container">
@@ -188,7 +198,7 @@
         </div>
     </section>
 
-    <!-- Hero Section moved to bottom (Login Section) -->
+    <!-- Hero Section (Login) -->
     <section class="hero" id="login-section" style="margin:60px 0;">
         <div class="hero-content" style="background:#f5f5f5; padding:40px; border-radius:15px; max-width:900px; margin:auto; text-align:center;">
             <h1 style="color:purple;">Manage Your Academic Journey</h1>
@@ -241,22 +251,18 @@
     </footer>
 
     <script>
-        // Scroll to top on About Us button
         document.getElementById('about-btn').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Scroll to bottom on Contact button
         document.getElementById('contact-btn').addEventListener('click', () => {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
 
-        // Scroll-top button
         document.querySelector('.scroll-top').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Footer smooth scroll links
         document.querySelectorAll('.footer-links .scroll-link').forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault();
@@ -267,9 +273,10 @@
                 }
             });
         });
+
         function openLogin() {
-    window.location.href = "login.html";
-}
+            window.location.href = "login.html";
+        }
     </script>
 
 </body>
