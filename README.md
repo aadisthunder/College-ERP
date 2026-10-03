@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/logo.png" alt="College ERP Logo" width="100" style="border-radius: 12px; margin-bottom: 12px;" />
+  <img src="assets/logo.png" alt="College ERP Logo" width="120" style="border-radius: 14px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
 
   # College ERP
 
