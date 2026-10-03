@@ -1,15 +1,15 @@
 <div align="center">
 
-  # 🎓 College ERP
+  # College ERP
 
-  **A modern, lightweight institutional web portal & academic management dashboard.**  
+  **A modern, lightweight institutional web portal and academic management dashboard.**  
   Attendance Tracking · Timetable Schedules · Notice Board · Role-Based Access · Exam Records
 
   <br />
 
   <p>
     <a href="https://college-erp-aadi.web.app" target="_blank">
-      <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-COLLEGE--ERP--AADI.WEB.APP-2563eb?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo" />
+      <img src="https://img.shields.io/badge/LIVE_DEMO-COLLEGE--ERP--AADI.WEB.APP-2563eb?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo" />
     </a>
     <a href="LICENSE">
       <img src="https://img.shields.io/badge/LICENSE-MIT-16a34a?style=for-the-badge" alt="License" />
@@ -20,7 +20,7 @@
   </p>
 
   <p>
-    <strong>🔗 Live Application URL:</strong> <a href="https://college-erp-aadi.web.app" target="_blank">https://college-erp-aadi.web.app</a>
+    <strong>Live Application URL:</strong> <a href="https://college-erp-aadi.web.app" target="_blank">https://college-erp-aadi.web.app</a>
   </p>
 
   <img src="assets/logo.png" alt="College ERP Emblem" width="90" style="margin-top: 12px; margin-bottom: 8px;" />
@@ -47,7 +47,7 @@
 
 ---
 
-## 📸 Application Showcase
+## Application Showcase
 
 ### 1. Institutional Landing Portal
 ![College ERP Landing Portal](assets/screenshot-home.png)
@@ -62,17 +62,17 @@
 
 ## What is College ERP?
 
-**College ERP** is a fully client-side academic management portal and university web platform. Designed with an eye-friendly, modern slate-and-indigo aesthetic, it eliminates the need for heavyweight backend servers by managing authentication, student profiles, attendance, and administrative records entirely in the browser using `localStorage`.
+**College ERP** is a client-side academic management portal and university web platform. Designed with clean slate and royal blue styling, it eliminates the need for heavyweight backend servers by managing authentication, student profiles, attendance, and administrative records entirely in the browser using `localStorage`.
 
 The platform provides an institutional landing portal alongside an interactive dashboard tailored for both **Students** and **Faculty**.
 
 ---
 
-## 👥 Role-Based Capabilities & Features
+## Role-Based Capabilities & Features
 
 College ERP provides distinct capabilities depending on the user's role:
 
-### 👨‍🏫 Faculty / Teachers
+### Faculty and Teachers
 Faculty members have administrative and instructional authority over classroom records:
 - **Attendance Management**: Mark, edit, and update daily student attendance across batches and lecture sessions.
 - **Timetable Authoring**: Create, schedule, and configure timetable cards with subject names, lecture halls, and timings.
@@ -80,7 +80,7 @@ Faculty members have administrative and instructional authority over classroom r
 - **Academic Evaluation**: Manage continuous assessments and exam marks records.
 - **Administrative Privileges**: Access faculty-exclusive tools and modify operational data.
 
-### 🎓 Students
+### Students
 Students have an interactive self-service view of their academic standing:
 - **Attendance Monitoring**: View personal attendance percentages, present/absent ratios, and attendance warning indicators.
 - **Timetable Viewer**: Inspect daily class schedules, subject assignments, and assigned faculty details.
@@ -88,21 +88,21 @@ Students have an interactive self-service view of their academic standing:
 - **Campus Services**: Check admission details, fee collection status, and hostel room allocations.
 - **PDF Report Generation**: Export and download official academic records and marksheets using `jsPDF`.
 
-### ⚖️ Capability Comparison (Faculty vs. Student)
+### Capability Comparison (Faculty vs. Student)
 
-| Feature / Action | 👨‍🏫 Faculty | 🎓 Student |
+| Feature / Action | Faculty | Student |
 | :--- | :---: | :---: |
-| Mark & Edit Student Attendance | ✅ Full Access | ❌ View Only |
-| Create & Reorder Timetable Slots | ✅ Full Access | ❌ View Only |
-| Publish Official Notices | ✅ Full Access | ❌ View Only |
-| Enter Examination Marks | ✅ Full Access | ❌ View Only |
-| View Personal Academic Records | ✅ Yes | ✅ Yes |
-| Download PDF Reports | ✅ Yes | ✅ Yes |
-| Self-Register New Accounts | ❌ Admin Pre-seeded | ✅ Default Role |
+| Mark & Edit Student Attendance | Full Access | View Only |
+| Create & Reorder Timetable Slots | Full Access | View Only |
+| Publish Official Notices | Full Access | View Only |
+| Enter Examination Marks | Full Access | View Only |
+| View Personal Academic Records | Yes | Yes |
+| Download PDF Reports | Yes | Yes |
+| Self-Register New Accounts | Pre-seeded | Default Role |
 
 ---
 
-## 🔑 Default Credentials
+## Default Credentials
 
 For quick exploration, the following credentials are pre-seeded in the system:
 
@@ -115,7 +115,7 @@ For quick exploration, the following credentials are pre-seeded in the system:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 College-ERP/
@@ -124,13 +124,15 @@ College-ERP/
 │   ├── college-bg.jpg
 │   ├── college-life.jpg
 │   ├── logo.png             # Clean light-themed academic emblem
+│   ├── mail.svg             # Lucide mail icon
+│   ├── phone.svg            # Lucide phone icon
 │   ├── screenshot-home.png      # Landing portal screenshot
 │   ├── screenshot-dashboard.png # ERP dashboard screenshot
 │   ├── screenshot-login.png     # Login auth screenshot
 │   └── teacher.jpg
 ├── css/                     # Stylesheets
 │   ├── auth.css             # Authentication styling
-│   ├── nstyles.css          # Eye-friendly academic landing page styles
+│   ├── nstyles.css          # Academic landing page styles
 │   └── style2.css           # Dashboard layout & widget styles
 ├── js/                      # Frontend JavaScript
 │   ├── attendance.js        # Attendance computation & UI
@@ -150,7 +152,7 @@ College-ERP/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 ```bash
@@ -170,7 +172,7 @@ Then visit `http://localhost:3000`.
 
 ---
 
-## 🔥 Deployment to Firebase Hosting
+## Deployment to Firebase Hosting
 
 This project is pre-configured for **Firebase Hosting**.
 
@@ -189,7 +191,7 @@ Live site: [https://college-erp-aadi.web.app](https://college-erp-aadi.web.app)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -201,6 +203,6 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
