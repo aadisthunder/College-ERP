@@ -1,17 +1,29 @@
 <div align="center">
 
-  <img src="assets/logo.png" alt="College ERP Logo" width="120" style="border-radius: 14px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
-
-  # College ERP
+  # 🎓 College ERP
 
   **A modern, lightweight institutional web portal & academic management dashboard.**  
-  Role-Based Access · Attendance Tracking · Timetable Schedules · Notice Board · Exam Records — zero server setup required.
+  Attendance Tracking · Timetable Schedules · Notice Board · Role-Based Access · Exam Records
+
+  <br />
 
   <p>
-    <a href="https://college-erp-aadi.web.app" target="_blank"><img src="https://img.shields.io/badge/LIVE_DEMO-COLLEGE--ERP--AADI.WEB.APP-8b5cf6?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo" /></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-22c55e?style=for-the-badge" alt="License" /></a>
-    <a href="https://college-erp-aadi.web.app"><img src="https://img.shields.io/badge/DEPLOYMENT-FIREBASE_HOSTING-06b6d4?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase Hosting" /></a>
+    <a href="https://college-erp-aadi.web.app" target="_blank">
+      <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-COLLEGE--ERP--AADI.WEB.APP-2563eb?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo" />
+    </a>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/badge/LICENSE-MIT-16a34a?style=for-the-badge" alt="License" />
+    </a>
+    <a href="https://college-erp-aadi.web.app">
+      <img src="https://img.shields.io/badge/DEPLOYMENT-FIREBASE_HOSTING-0284c7?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase Hosting" />
+    </a>
   </p>
+
+  <p>
+    <strong>🔗 Live Application URL:</strong> <a href="https://college-erp-aadi.web.app" target="_blank">https://college-erp-aadi.web.app</a>
+  </p>
+
+  <img src="assets/logo.png" alt="College ERP Emblem" width="90" style="margin-top: 12px; margin-bottom: 8px;" />
 
 </div>
 
@@ -35,28 +47,58 @@
 
 ---
 
+## 📸 Application Showcase
+
+### 1. Institutional Landing Portal
+![College ERP Landing Portal](assets/screenshot-home.png)
+
+### 2. Student & Faculty ERP Dashboard
+![College ERP Dashboard](assets/screenshot-dashboard.png)
+
+### 3. Authentication & Login Portal
+![College ERP Login Portal](assets/screenshot-login.png)
+
+---
+
 ## What is College ERP?
 
-**College ERP** is a fully client-side academic management portal and college web platform. It eliminates the need for heavyweight backend servers by managing authentication, student profiles, attendance, and administrative records entirely in the browser using `localStorage`.
+**College ERP** is a fully client-side academic management portal and university web platform. Designed with an eye-friendly, modern slate-and-indigo aesthetic, it eliminates the need for heavyweight backend servers by managing authentication, student profiles, attendance, and administrative records entirely in the browser using `localStorage`.
 
 The platform provides an institutional landing portal alongside an interactive dashboard tailored for both **Students** and **Faculty**.
 
 ---
 
-## ✨ Features
+## 👥 Role-Based Capabilities & Features
 
-- **Institutional Landing Page**: Responsive showcase highlighting academics, admissions, faculty, hostel, and campus facilities.
-- **Dual Role-Based Portals**: Separate dashboard contexts for **Faculty** and **Students**.
-- **Attendance Management**: Mark, view, and calculate attendance percentages in real time.
-- **Interactive Timetable**: Dynamic timetable schedule cards for weekly lecture plans.
-- **Notice Board & Announcements**: Centralized announcement hub for institutional updates.
-- **Academic Workflow Modules**:
-  - Admissions tracking
-  - Fee collection & receipts
-  - Hostel allocation details
-  - Examination records
-- **PDF Exporting**: On-the-fly client-side document generation using `jsPDF`.
-- **Zero Server Setup**: Out-of-the-box static deployment ready for any hosting provider.
+College ERP provides distinct capabilities depending on the user's role:
+
+### 👨‍🏫 Faculty / Teachers
+Faculty members have administrative and instructional authority over classroom records:
+- **Attendance Management**: Mark, edit, and update daily student attendance across batches and lecture sessions.
+- **Timetable Authoring**: Create, schedule, and configure timetable cards with subject names, lecture halls, and timings.
+- **Notice Publishing**: Broadcast institutional circulars, exam dates, and student announcements.
+- **Academic Evaluation**: Manage continuous assessments and exam marks records.
+- **Administrative Privileges**: Access faculty-exclusive tools and modify operational data.
+
+### 🎓 Students
+Students have an interactive self-service view of their academic standing:
+- **Attendance Monitoring**: View personal attendance percentages, present/absent ratios, and attendance warning indicators.
+- **Timetable Viewer**: Inspect daily class schedules, subject assignments, and assigned faculty details.
+- **Notice Board**: Stay updated with the latest campus news, events, and department notices.
+- **Campus Services**: Check admission details, fee collection status, and hostel room allocations.
+- **PDF Report Generation**: Export and download official academic records and marksheets using `jsPDF`.
+
+### ⚖️ Capability Comparison (Faculty vs. Student)
+
+| Feature / Action | 👨‍🏫 Faculty | 🎓 Student |
+| :--- | :---: | :---: |
+| Mark & Edit Student Attendance | ✅ Full Access | ❌ View Only |
+| Create & Reorder Timetable Slots | ✅ Full Access | ❌ View Only |
+| Publish Official Notices | ✅ Full Access | ❌ View Only |
+| Enter Examination Marks | ✅ Full Access | ❌ View Only |
+| View Personal Academic Records | ✅ Yes | ✅ Yes |
+| Download PDF Reports | ✅ Yes | ✅ Yes |
+| Self-Register New Accounts | ❌ Admin Pre-seeded | ✅ Default Role |
 
 ---
 
@@ -69,7 +111,7 @@ For quick exploration, the following credentials are pre-seeded in the system:
 | **Faculty / Admin** | `admin` | `1234` | Full Faculty & Admin Dashboard Access |
 | **Student** | `student` | `1234` | Student Dashboard & Academic Records |
 
-*You can also create new student accounts via the [Registration Form](register.html).*
+> **Note:** Any new accounts registered via the [Registration Form](register.html) are assigned **Student** access by default.
 
 ---
 
@@ -77,15 +119,18 @@ For quick exploration, the following credentials are pre-seeded in the system:
 
 ```text
 College-ERP/
-├── assets/                  # Institutional logos, banners, and photography
+├── assets/                  # Institutional logos, banners, and screenshots
 │   ├── background.png
 │   ├── college-bg.jpg
 │   ├── college-life.jpg
-│   ├── logo.png
+│   ├── logo.png             # Clean light-themed academic emblem
+│   ├── screenshot-home.png      # Landing portal screenshot
+│   ├── screenshot-dashboard.png # ERP dashboard screenshot
+│   ├── screenshot-login.png     # Login auth screenshot
 │   └── teacher.jpg
 ├── css/                     # Stylesheets
 │   ├── auth.css             # Authentication styling
-│   ├── nstyles.css          # Landing page styles
+│   ├── nstyles.css          # Eye-friendly academic landing page styles
 │   └── style2.css           # Dashboard layout & widget styles
 ├── js/                      # Frontend JavaScript
 │   ├── attendance.js        # Attendance computation & UI
