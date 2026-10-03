@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College ERP - University Website</title>
+    <link rel="stylesheet" href="css/nstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fix scroll alignment so section titles aren’t hidden under navbar */
+        #home, #about, #admission, #faculty, #hostel, #login-section {
+            scroll-margin-top: 80px;
+        }
+
+        /* College Banner Container Fix */
+        .college-banner {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            overflow: hidden; /* ✅ prevents zoomed image overflow */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add background box */
+        .banner-box {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;  /* Keeps it centered on big screens */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Zoom effect for banner background image */
+        .banner-box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Text inside box */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+        }
+
+        .banner-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: purple;
+        }
+
+        .banner-text p {
+            font-size: 1rem;
+            margin-top: 15px;
+            color: black;
+            background: rgba(255,255,255,0.7);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Extra zoom for mobile */
+        @media (max-width: 768px) {
+            .banner-box img {
+                transform: scale(1.2);
+            }
+            .banner-text h1 {
+                font-size: 1.8rem;
+            }
+            .banner-text p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Extra zoom for desktop */
+        @media (min-width: 1024px) {
+            .banner-box img {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Prevent horizontal scroll globally */
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="College ERP Logo" style="height:40px; width:auto; border-radius:6px; margin-right:8px;">
+                <span class="logo-text">COLLEGE ERP</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#admission">ADMISSION</a></li>
+                <li><a href="#fee">FEE COLLECTION</a></li>
+                <li><a href="#hostel">HOSTEL ALLOCATION</a></li>
+            </ul>
+            
+            <button class="login-btn" onclick="document.getElementById('login-section').scrollIntoView({behavior:'smooth'})">Login ▼</button>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="about-top" id="about" style="background:#f9f9f9; padding:40px 20px; text-align:center;">
+        <h2>About Us</h2>
+        <p style="max-width:900px; margin:15px auto; font-size:16px; line-height:1.6;">
+            College ERP is a premier institutional portal committed to excellence in education, academic management, and holistic development of students. 
+            With a vision to streamline administrative workflows and empower students and faculty, we provide seamless digital access, 
+            transparent academic records, and an integrated campus environment.
+        </p>
+    </section>
+
+    <!-- Top Background Section with Image inside a Box -->
+    <section class="college-banner" id="home">
+        <div class="banner-box">
+            <img src="assets/college-bg.jpg" alt="College">
+            <div class="banner-text">
+                <h1>Welcome to College ERP</h1>
+                <p>A modern academic management portal dedicated to administrative excellence, student records, and digital campus operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remaining sections unchanged -->
+    <!-- Proud moments of College ERP Section -->
+    <section class="about" id="admission">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>Proud moments of <span class="highlight">College ERP</span></h2>
+                <p>Our institute consistently ranks among the top colleges in the region, reflecting our commitment to academic excellence and innovation.<br><br>
+                We are proud to be recognized for our strong placement record and industry-oriented curriculum.<br><br>
+                Our dedicated faculty and modern infrastructure contribute to an environment that nurtures talent and skills.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <h3>95%+ Success Rate</h3>
+                        <p>Consistent results with Top Ranks in University Exams</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🏢</div>
+                    <div class="stat-content">
+                        <h3>300+ Recruiters</h3>
+                        <p>Leading Companies trust our Students every year</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-content">
+                        <h3>40000+ Graduates</h3>
+                        <p>Thriving across industries worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated teachers section -->
+    <section class="cta" id="faculty">
+        <div class="cta-container">
+            <div class="cta-content">
+                <p class="cta-subtitle">Providing you the best Faculties with Decades of Experiences</p>
+                <h2>Dedicated teachers shaping futures with passion and expertise.</h2>
+                <button class="btn-primary" id="about-btn">About us ▲</button>
+            </div>
+            <div class="cta-image">
+                <img src="assets/teacher.jpg" alt="Dedicated teacher" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Life & Opportunities Section -->
+    <section class="features" id="hostel">
+        <div class="features-container">
+            <h2>Life & Opportunities with us</h2>
+            <div class="features-content" style="display:flex; gap:30px; align-items:flex-start;">
+                <div class="features-image">
+                    <img src="assets/college-life.jpg" alt="Campus Map" onerror="this.style.display='none'">
+                </div>
+                <div class="features-list" style="flex:1;">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Modern Labs</h3>
+                            <p>Hands-on learning with advanced equipment.<br><br>Our state-of-the-art laboratories provide students with practical experience, preparing them for real-world challenges in their field.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Comfortable Hostels</h3>
+                            <p>A home away from home.<br><br>Safe, hygienic, and well-furnished hostels ensure students enjoy a comfortable stay while focusing on studies and personal growth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-content">
+                            <h3>Exams & Assessments</h3>
+                            <p>Fair and transparent evaluation system.<br><br>Structured exams and continuous assessments help students track progress, improve performance, and build confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Records -->
+    <section class="ugc" style="margin-top:50px;">
+        <div class="ugc-content">
+            <p>Proudly Recognized & Trusted by University Grants Commission (UGC)</p>
+        </div>
+    </section>
+
+    <!-- Contact for Consultation -->
+    <section class="services" style="margin:50px 0; padding-left:40px;">
+        <div class="services-content">
+            <h1>Transforming WORLDs with just a pen</h1>
+            <p>Education is not just about Books. It's about building your future.<br>
+            Knowledge opens doors, and every admission is the first step towards endless possibilities.</p>
+            <button class="btn-secondary" id="contact-btn">Contact for Consultation ↓</button>
+        </div>
+    </section>
+
+    <!-- Hero Section (Login) -->
+    <section class="hero" id="login-section" style="margin:60px 0;">
+        <div class="hero-content" style="background:#f5f5f5; padding:40px; border-radius:15px; max-width:900px; margin:auto; text-align:center;">
+            <h1 style="color:purple;">Manage Your Academic Journey</h1>
+            <p style="color:black;">Login here to access your courses, assignments, and academic records.</p>
+            <div style="display:flex; justify-content:center; gap:15px; margin:20px auto; flex-wrap:wrap; max-width:550px;">
+                <div style="background:#fff; border:1px solid #ddd; border-radius:10px; padding:12px 20px; text-align:center; min-width:200px; flex:1;">
+                    <div style="font-weight:600; color:purple; margin-bottom:5px;">Faculty Login</div>
+                    <div style="font-size:14px; color:#333;">Username: <strong>admin</strong></div>
+                    <div style="font-size:14px; color:#333;">Password: <strong>1234</strong></div>
+                </div>
+                <div style="background:#fff; border:1px solid #ddd; border-radius:10px; padding:12px 20px; text-align:center; min-width:200px; flex:1;">
+                    <div style="font-weight:600; color:purple; margin-bottom:5px;">Student Login</div>
+                    <div style="font-size:14px; color:#333;">Username: <strong>student</strong></div>
+                    <div style="font-size:14px; color:#333;">Password: <strong>1234</strong></div>
+                </div>
+            </div>
+            <p style="font-size:13px; color:#555; margin-bottom:15px;">Note: New account registration will always be for student login.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openLogin()">Students Login ▼</button>
+                <button class="btn-primary" onclick="openLogin()">Faculty Login ▼</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="College ERP Logo" style="height:40px; width:auto; border-radius:6px; margin-right:8px;">
+                        <span class="logo-text">COLLEGE ERP</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <address style="font-style:normal; line-height:1.6; color:#ccc; margin-bottom:10px;">
+                        <strong>College ERP Campus</strong><br>
+                        Knowledge Park, Institutional Area,<br>
+                        Greater Noida, UP 201310
+                    </address>
+                    <div class="contact-info">
+                        <a href="tel:+919910000000" style="display:flex; align-items:center; gap:8px; margin-bottom:8px; color:#ff6600; font-weight:600; text-decoration:none;">
+                            <img src="assets/phone.svg" alt="Phone" width="16" height="16" style="display:inline-block;">
+                            <span>+91 99100 00000</span>
+                        </a>
+                        <a href="mailto:aadityaparkash@gmail.com" style="display:flex; align-items:center; gap:8px; color:#ff6600; font-weight:600; text-decoration:none;">
+                            <img src="assets/mail.svg" alt="Email" width="16" height="16" style="display:inline-block;">
+                            <span>aadityaparkash@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="footer-links">
+                        <a href="#about" class="scroll-link">About Us</a>
+                        <a href="#admission" class="scroll-link">Proud Moments</a>
+                        <a href="#faculty" class="scroll-link">Faculty</a>
+                        <a href="#hostel" class="scroll-link">Life & Opportunities</a>
+                        <a href="#login-section" class="scroll-link">Student Login</a>
+                        <a href="#login-section" class="scroll-link">Faculty Login</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 All rights reserved.</p>
+                <button class="scroll-top">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('about-btn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('contact-btn').addEventListener('click', () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.nav-menu a, .footer-links .scroll-link').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        function openLogin() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
+
+

@@ -23,7 +23,7 @@
     <strong>Live Application URL:</strong> <a href="https://college-erp-aadi.web.app" target="_blank">https://college-erp-aadi.web.app</a>
   </p>
 
-  <img src="assets/logo.png" alt="College ERP Emblem" width="90" style="margin-top: 12px; margin-bottom: 8px;" />
+  <img src="public/assets/logo.png" alt="College ERP Emblem" width="90" style="margin-top: 12px; margin-bottom: 8px;" />
 
 </div>
 
@@ -50,13 +50,13 @@
 ## Application Showcase
 
 ### 1. Institutional Landing Portal
-![College ERP Landing Portal](assets/screenshot-home.png)
+![College ERP Landing Portal](screenshots/screenshot-home.png)
 
 ### 2. Student & Faculty ERP Dashboard
-![College ERP Dashboard](assets/screenshot-dashboard.png)
+![College ERP Dashboard](screenshots/screenshot-dashboard.png)
 
 ### 3. Authentication & Login Portal
-![College ERP Login Portal](assets/screenshot-login.png)
+![College ERP Login Portal](screenshots/screenshot-login.png)
 
 ---
 
@@ -111,7 +111,7 @@ For quick exploration, the following credentials are pre-seeded in the system:
 | **Faculty / Admin** | `admin` | `1234` | Full Faculty & Admin Dashboard Access |
 | **Student** | `student` | `1234` | Student Dashboard & Academic Records |
 
-> **Note:** Any new accounts registered via the [Registration Form](register.html) are assigned **Student** access by default.
+> **Note:** Any new accounts registered via the [Registration Form](public/register.html) are assigned **Student** access by default.
 
 ---
 
@@ -119,32 +119,35 @@ For quick exploration, the following credentials are pre-seeded in the system:
 
 ```text
 College-ERP/
-├── assets/                  # Institutional logos, banners, and screenshots
-│   ├── background.png
-│   ├── college-bg.jpg
-│   ├── college-life.jpg
-│   ├── logo.png             # Clean light-themed academic emblem
-│   ├── mail.svg             # Lucide mail icon
-│   ├── phone.svg            # Lucide phone icon
-│   ├── screenshot-home.png      # Landing portal screenshot
-│   ├── screenshot-dashboard.png # ERP dashboard screenshot
-│   ├── screenshot-login.png     # Login auth screenshot
-│   └── teacher.jpg
-├── css/                     # Stylesheets
-│   ├── auth.css             # Authentication styling
-│   ├── nstyles.css          # Academic landing page styles
-│   └── style2.css           # Dashboard layout & widget styles
-├── js/                      # Frontend JavaScript
-│   ├── attendance.js        # Attendance computation & UI
-│   ├── script.js            # Auth and user session management
-│   └── script2.js           # Dashboard routing and state handling
-├── auth.html                # Unified modal authentication page
-├── dashboard.html           # Student & Faculty ERP Dashboard
-├── index.html               # Institutional Landing Page
-├── login.html               # Login page
-├── register.html            # Registration page
+├── public/                  # Static website frontend
+│   ├── assets/              # Logos, banners, vector icons
+│   │   ├── background.png
+│   │   ├── college-bg.jpg
+│   │   ├── college-life.jpg
+│   │   ├── logo.png         # Clean light-themed academic emblem
+│   │   ├── mail.svg         # Lucide mail icon
+│   │   ├── phone.svg        # Lucide phone icon
+│   │   └── teacher.jpg
+│   ├── css/                 # Stylesheets
+│   │   ├── auth.css         # Authentication styling
+│   │   ├── nstyles.css      # Academic landing page styles
+│   │   └── style2.css       # Dashboard layout & widget styles
+│   ├── js/                  # Frontend JavaScript
+│   │   ├── attendance.js    # Attendance computation & UI
+│   │   ├── script.js        # Auth and user session management
+│   │   └── script2.js       # Dashboard routing and state handling
+│   ├── auth.html            # Unified modal authentication page
+│   ├── dashboard.html       # Student & Faculty ERP Dashboard
+│   ├── index.html           # Institutional Landing Page
+│   ├── login.html           # Login page
+│   └── register.html        # Registration page
+├── screenshots/             # Documentation UI showcases
+│   ├── screenshot-dashboard.png
+│   ├── screenshot-home.png
+│   └── screenshot-login.png
+├── .agents/                 # Workspace skills and agent configurations
 ├── .firebaserc              # Firebase project target configuration
-├── firebase.json            # Firebase Hosting configuration
+├── firebase.json            # Firebase Hosting configuration (public: "public")
 ├── .gitignore               # Ignored build, cache, and system files
 ├── LICENSE                  # MIT License
 └── README.md                # Project documentation
@@ -161,12 +164,12 @@ cd College-ERP
 ```
 
 ### 2. Run Locally
-Because College ERP is built with vanilla web technologies, you can open `index.html` directly in any modern browser:
+Because College ERP is built with vanilla web technologies, you can open `public/index.html` directly in any modern browser:
 
-- Double-click `index.html` or drag it into Chrome/Edge/Firefox.
+- Double-click `public/index.html` or drag it into Chrome/Edge/Firefox.
 - Alternatively, serve via any static HTTP server:
 ```bash
-npx serve .
+npx serve public
 ```
 Then visit `http://localhost:3000`.
 
